@@ -1,0 +1,19 @@
+
+<div class="relative w-screen h-screen overflow-hidden">
+  <!-- The main 3D particle system canvas -->
+  <app-particle-system [config]="particleConfig()"></app-particle-system>
+  
+  <!-- The gesture control component, which includes the video feed -->
+  @if (isCameraOn()) {
+    <app-gesture-control (handOpennessChange)="onHandOpennessChange($event)"></app-gesture-control>
+  }
+
+  <!-- The UI control panel -->
+  <app-ui-control
+    [initialConfig]="uiConfig()"
+    [isCameraOn]="isCameraOn()"
+    [handOpenness]="handOpenness()"
+    (configChange)="onUiConfigChange($event)"
+    (cameraToggle)="onCameraToggle($event)">
+  </app-ui-control>
+</div>

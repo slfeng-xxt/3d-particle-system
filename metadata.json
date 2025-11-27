@@ -1,0 +1,7 @@
+{
+  "name": "Interactive 3D Particle System",
+  "description": "A real-time 3D particle system controlled by hand gestures via your camera. Switch between shapes, change colors, and manipulate particles with your hand.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
